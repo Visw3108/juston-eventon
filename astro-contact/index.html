@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/astro-contact/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <form>
+            <div class="input-group">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email Address" required>
+                <input type="tel" placeholder="Phone" required>
+            </div>
+            <h3>I am Looking For *</h3>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> New Website</label>
+                <label><input type="checkbox"> Website Redesign</label>
+                <label><input type="checkbox"> Digital Marketing</label>
+                <label><input type="checkbox"> SEO</label>
+                <label><input type="checkbox"> Paid Ads</label>
+                <label><input type="checkbox"> Logo Design</label>
+                <label><input type="checkbox"> Social Media Marketing</label>
+                <label><input type="checkbox"> Website Audit</label>
+                <label><input type="checkbox" id="otherCheckbox"> Other</label>
+            </div>
+            <textarea id="otherTextarea" placeholder="Please specify your query..." style="display:none;"></textarea>
+            <textarea placeholder="Your Message"></textarea>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const otherCheckbox = document.getElementById('otherCheckbox');
+        const otherTextarea = document.getElementById('otherTextarea');
+
+        otherCheckbox.addEventListener('change', function () {
+            if (this.checked) {
+                otherTextarea.style.display = 'block';
+                otherTextarea.focus(); // Optional: focus on the textarea when it appears
+            } else {
+                otherTextarea.style.display = 'none';
+                otherTextarea.value = ''; // Clear the textarea if unchecked
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

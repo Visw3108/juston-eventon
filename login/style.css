@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    /* background-color: rgb(255, 119, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    column-gap: 0px;
+}
+
+.form {
+    position: absolute;
+    max-width: 450px;
+    width: 100%;
+    margin: 20px;
+    padding-top: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form:hover {
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.form.signup {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.forms.Show-Signup .form.signup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.forms.Show-Signup .form.login {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.heading {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.line {
+    background-color: rgb(195, 195, 195);
+    margin: 20px;
+    height: 1px;
+}
+
+.underline {
+    background-color: rgb(255, 119, 0);
+    margin: 8px 120px 40px 120px;
+    height: 2.5px;
+}
+
+.content {
+    margin: 0 20px;
+    margin-bottom: 30px;
+}
+
+.field {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.input {
+    padding: 0 20px;
+}
+
+.field input,
+.field button {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.field input {
+    outline: none;
+    border-style: none none solid none;
+    border-radius: 0;
+}
+
+.field input:focus {
+    border-bottom: 2px solid rgb(255, 119, 0);
+}
+
+.input .hide-show {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.field button {
+    background-color: rgb(255, 119, 0);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field button:hover {
+    background-color: rgb(255, 100, 0);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.forg {
+    margin: 10px 0 23px 0;
+    text-align: right;
+    padding: 0 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link a,
+.forg a {
+    text-decoration: none;
+}
+
+.link {
+    text-align: center;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.thirdLogin {
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thirdLogin:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.facebook {
+    border-style: none;
+    background-color: #3b5998;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.facebook:hover {
+    background-color: #2d4373;
+    transform: scale(1.05);
+}
+
+.face-icon {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+.google {
+    opacity: 0.7;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.google:hover {
+    background-color: #eee;
+    transform: scale(1.05);
+}
+
+.space {
+    margin: 25px 0 10px 0;
+}
+
+/* Error styles */
+.error {
+    border-color: red;
+}
+
+
+
+
+
+
+/* Input Fields */
+.field input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field input::placeholder {
+    color: #95a5a6;
+}
+
+.field input:focus {
+    background-color: #fff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Button Styling */
+.field button {
+    background-color: #ff6b6b;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.field button:hover {
+    background-color: #ff9671;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Error styling */
+.error {
+    border-color: red;
+}
+
+/* Popup Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: none;
+    width: 350px;
+    max-width: 90%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup.active {
+    display: block;
+    animation: popupFadeIn 0.4s ease forwards, popupBounce 0.6s ease-in-out forwards;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes popupBounce {
+    0% {
+        transform: translate(-50%, -60%) scale(0.9);
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

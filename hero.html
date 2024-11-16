@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    
+</head>
+<style>
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.pricing-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 0;
+}
+
+.toggle-buttons {
+    margin: 20px 0;
+}
+
+.toggle-buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: #ddd;
+    color: #333;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.toggle-buttons button.active {
+    background: #333;
+    color: #fff;
+}
+
+.pricing-table {
+    display: none;
+}
+
+.pricing-table.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+thead th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Buy Now Button */
+tfoot button.buy-now {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+tfoot button.buy-now:hover {
+    background-color: #43a047;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(67, 160, 71, 0.3);
+}
+
+/* Details Link */
+.details-link {
+    color: #1976d2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.details-link:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Details Row */
+.details-row {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+
+    tfoot button.buy-now {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .toggle-buttons button {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+    }
+
+    tfoot button.buy-now {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .toggle-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .toggle-buttons button {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    tfoot button.buy-now {
+        padding: 6px 10px;
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+</style>
+<body>
+    <div class="pricing-container">
+        <h2>PREMIUM OPTIMIZATION PLANS</h2>
+        <p>Affordable SEO Packages</p>
+        <div class="toggle-buttons">
+            <button id="monthlyBtn" onclick="showMonthly()">Monthly</button>
+            <button id="annuallyBtn" onclick="showAnnually()">Annual</button>
+        </div>
+
+        <!-- Monthly Pricing Table -->
+        <div id="monthlyTable" class="pricing-table active">
+            <table>
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th>STARTER</th>
+                        <th>JUMP START</th>
+                        <th>RANK BUILDER</th>
+                        <th>BUSINESS BUILDER</th>
+                        <th>MARKET MAKER</th>
+                        <th>ENTERPRISE SEO</th>
+                    </tr>
+                    <tr>
+                        <td>Start today! Upgrade Or Cancel Anytime!</td>
+                        <td>$200 / Monthly</td>
+                        <td>$400 / Monthly</td>
+                        <td>$800 / Monthly</td>
+                        <td>$1200 / Monthly</td>
+                        <td>$1800 / Monthly</td>
+                        <td>$2400 / Monthly</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Targeted Keywords</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>18</td>
+                        <td>25</td>
+                        <td>40</td>
+                        <td>55</td>
+                    </tr>
+                    <!-- Add additional rows for other features as per the image -->
+                </tbody>
+                <tfoot>
+                  <tr class="details-row">
+                    <td> </td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                </tr>
+                    <tr>
+                        <td> </td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                    </tr>
+                   
+                </tfoot>
+            </table>
+        </div>
+
+        <!-- Annual Pricing Table -->
+        <div id="annuallyTable" class="pricing-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th> </th>
+                        <th>STARTER</th>
+                        <th>JUMP START</th>
+                        <th>RANK BUILDER</th>
+                        <th>BUSINESS BUILDER</th>
+                        <th>MARKET MAKER</th>
+                        <th>ENTERPRISE SEO</th>
+                    </tr>
+                    <tr>
+                        <td>Start today! Upgrade Or Cancel Anytime!</td>
+                        <td>$179 / Annualy</td>
+                        <td>$359 / Annualy</td>
+                        <td>$699 / Annualy</td>
+                        <td>$1049 / Annualy</td>
+                        <td>$1599 / Annualy</td>
+                        <td>$1999 / Annualy</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Targeted Keywords</td>
+                        <td>5</td>
+                        <td>10</td>
+                        <td>18</td>
+                        <td>25</td>
+                        <td>40</td>
+                        <td>55</td>
+                    </tr>
+                    <!-- Add additional rows for other features as per the image -->
+                </tbody>
+                <tfoot>
+                  <tr class="details-row">
+                    <td> </td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                    <td><a href="#" class="details-link">Details</a></td>
+                </tr>
+                    <tr>
+                        <td> </td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                        <td><button class="buy-now">BUY NOW</button></td>
+                    </tr>
+                    
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script>
+      function showMonthly() {
+    document.getElementById("monthlyTable").classList.add("active");
+    document.getElementById("annuallyTable").classList.remove("active");
+    document.getElementById("monthlyBtn").classList.add("active");
+    document.getElementById("annuallyBtn").classList.remove("active");
+}
+
+function showAnnually() {
+    document.getElementById("monthlyTable").classList.remove("active");
+    document.getElementById("annuallyTable").classList.add("active");
+    document.getElementById("monthlyBtn").classList.remove("active");
+    document.getElementById("annuallyBtn").classList.add("active");
+}
+
+// Set initial state
+document.getElementById("monthlyBtn").classList.add("active");
+
+    </script>
+</body>
+</html>
