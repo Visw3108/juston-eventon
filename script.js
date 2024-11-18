@@ -74,7 +74,7 @@ window.addEventListener("scroll", function () {
 
 //------------------ WELCOME-----------------------------------------
 
-/* document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const welcomeContent = document.querySelector(".welcome-content");
     const section = document.getElementById("welcome-section");
     
@@ -90,7 +90,7 @@ window.addEventListener("scroll", function () {
     }
     
     window.addEventListener("scroll", handleScroll);
-}); */
+});
 
 
 // ABOUT SECTION
