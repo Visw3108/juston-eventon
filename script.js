@@ -74,18 +74,24 @@ window.addEventListener("scroll", function () {
 
 //------------------ WELCOME-----------------------------------------
 
- // Fade-in up transition effect when scrolling to the section
- document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const welcomeContent = document.querySelector(".welcome-content");
-  window.addEventListener("scroll", function() {
-      const section = document.getElementById("welcome-section");
+  const section = document.getElementById("welcome-section");
+  
+  function handleScroll() {
       const sectionPosition = section.getBoundingClientRect().top;
       const screenPosition = window.innerHeight;
+
       if (sectionPosition < screenPosition) {
           welcomeContent.classList.add("fade-in-up");
+          // Remove the event listener to prevent re-triggering the effect
+          window.removeEventListener("scroll", handleScroll);
       }
-  });
+  }
+  
+  window.addEventListener("scroll", handleScroll);
 });
+
 
 // ABOUT SECTION
 
