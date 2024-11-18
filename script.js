@@ -74,7 +74,7 @@ window.addEventListener("scroll", function () {
 
 //------------------ WELCOME-----------------------------------------
 
- // Fade-in up transition effect when scrolling to the section
+/*  // Fade-in up transition effect when scrolling to the section
  document.addEventListener("DOMContentLoaded", function() {
   const welcomeContent = document.querySelector(".welcome-content");
   window.addEventListener("scroll", function() {
@@ -85,7 +85,7 @@ window.addEventListener("scroll", function () {
           welcomeContent.classList.add("fade-in-up");
       }
   });
-});
+}); */
 
 // ABOUT SECTION
 
