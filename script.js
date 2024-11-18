@@ -85,19 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const eventSection = document.querySelector(".event-section");
-
-  function handleScroll() {
-      const sectionPosition = eventSection.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight / 1.3;
-
-      if (sectionPosition < screenPosition) {
-          eventSection.classList.add("visible");
-          window.removeEventListener("scroll", handleScroll);
-      }
-  }
-
-  window.addEventListener("scroll", handleScroll);
+  // Add the "visible" class to trigger the transition effect
+  eventSection.classList.add("visible");
 });
+
 
 // SERVICE SECTION
 
