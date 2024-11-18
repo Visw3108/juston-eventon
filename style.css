@@ -808,7 +808,6 @@ body {
     font-size: 1rem;
   }
 }
-
 /* Welcome Section Styling */
 .welcome-section {
   display: flex;
@@ -820,14 +819,14 @@ body {
 }
 
 .welcome-content {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0; /* Initial state for fade-in-up effect */
+  transform: translateY(30px); /* Initial downward shift */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Smooth transition */
 }
 
 .welcome-content.fade-in-up {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Fully visible after animation */
+  transform: translateY(0); /* Reset position after animation */
 }
 
 .welcome-icon {
@@ -894,6 +893,7 @@ body {
     width: 20px;
   }
 }
+
 
 /* General styling for all screen sizes */
 /* Search and Filter container */
