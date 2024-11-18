@@ -74,23 +74,23 @@ window.addEventListener("scroll", function () {
 
 //------------------ WELCOME-----------------------------------------
 
-document.addEventListener("DOMContentLoaded", function() {
-  const welcomeContent = document.querySelector(".welcome-content");
-  const section = document.getElementById("welcome-section");
-  
-  function handleScroll() {
-      const sectionPosition = section.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight;
+/* document.addEventListener("DOMContentLoaded", function() {
+    const welcomeContent = document.querySelector(".welcome-content");
+    const section = document.getElementById("welcome-section");
+    
+    function handleScroll() {
+        const sectionPosition = section.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight;
 
-      if (sectionPosition < screenPosition) {
-          welcomeContent.classList.add("fade-in-up");
-          // Remove the event listener to prevent re-triggering the effect
-          window.removeEventListener("scroll", handleScroll);
-      }
-  }
-  
-  window.addEventListener("scroll", handleScroll);
-});
+        if (sectionPosition < screenPosition) {
+            welcomeContent.classList.add("fade-in-up");
+            // Remove the event listener to prevent re-triggering the effect
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }
+    
+    window.addEventListener("scroll", handleScroll);
+}); */
 
 
 // ABOUT SECTION
